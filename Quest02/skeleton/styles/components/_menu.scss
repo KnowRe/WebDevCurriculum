@@ -1,0 +1,24 @@
+@import "../utils/typo";
+
+.menu {
+  cursor: pointer;
+  flex: 0 0 25%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  &-icon {
+    background-color: #F6F9FC;
+    border-radius: 1rem 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-label {
+    text-align: center;
+    overflow: hidden;
+  }
+}

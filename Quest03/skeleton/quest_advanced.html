@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style>
+			.square {
+				width: 100px;
+				height: 100px;
+				border: 1px dashed black;
+				display: inline-block;
+				margin: 20px;
+			}
+
+			.enabled {
+				background-color: limegreen;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="row1">
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+		</section>
+
+		<section class="row2">
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+		</section>
+
+		<script>
+			var row1Squares = document.querySelectorAll('.row1 .square');
+			row1Squares.forEach(el => {
+				el.addEventListener('click', () => {
+					el.style.backgroundColor = el.style.backgroundColor ? null : 'yellow';
+				})
+			})
+
+			var row2Squares = document.querySelectorAll('.row2 .square');
+			row2Squares.forEach(el => {
+				el.addEventListener('click', () => {
+					el.classList.toggle('enabled');
+				})
+			})
+
+		</script>
+	</body>
+</html>

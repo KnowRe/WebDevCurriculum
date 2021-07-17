@@ -1,3 +1,10 @@
 {
-    "name": "quest08"
+  "name": "quest08",
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  },
+  "scripts": {
+    "dev": "nodemon server.js"
+  }
 }

@@ -1,0 +1,19 @@
+@import "../abstracts/variable";
+@import "./mixins";
+
+.m {
+  &l-auto {
+    margin-left: auto;
+  }
+  &x-auto {
+    margin: 0 auto;
+  }
+}
+
+@each $item in $rules {
+  @include generate(nth($item, 1), nth($item, 2));
+}
+
+@each $item in $rules-xy {
+  @include generate_xy(nth($item, 1), nth($item, 2), nth($item, 3));
+}

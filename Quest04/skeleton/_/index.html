@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Title</title>
+  </head>
+  <body>
+    <section id="target" class="desktop">
+      <header data-viewmodel="header" class="header">
+        <div data-template="tabs" data-viewmodel="tab" class="tab"></div>
+      </header>
+      <section data-viewmodel="window">
+        <div data-template="listItem" data-viewmodel="item"></div>
+      </section>
+    </section>
+    <script src="index.js"></script>
+    <script>
+      const scanner = new DomScanner(new DomVisitor());
+      const binder = setDomProcessor(scanner.scan(document.body));
+
+      const icons = {
+        name: "listItem",
+        data: "1,2,3,4,5,6".split(",").map((v) =>
+          ViewModel.get({
+            item: ViewModel.get({
+              position: {
+                pos1: 0,
+                pos2: 0,
+                pos3: 0,
+                pos4: 0,
+              },
+              styles: {
+                position: "absolute",
+                background: "#fff",
+                width: "100px",
+                height: "100px",
+                top: `${Number(v) * 100}px`,
+                offsetTop: "100px",
+                offsetLeft: "100px",
+                left: `${Number(v) * 150}px`,
+              },
+              properties: { innerHTML: "item " + v, class: '.icon' },
+              events: {
+                click(e, vm) {
+                  console.log(vm);
+                },
+                mousedown(e, vm) {
+                  e = e || window.event;
+                  e.preventDefault();
+                  vm.position.pos3 = e.clientX;
+                  vm.position.pos4 = e.clientY;
+
+                  document.onmouseup = function () {
+                    document.onmouseup = null;
+                    document.onmousemove = null;
+                  };
+
+                  document.onmousemove = (e) => {
+                    e = e || window.event;
+                    e.preventDefault();
+
+                    vm.position.pos1 = vm.position.pos3 - e.clientX;
+                    vm.position.pos2 = vm.position.pos4 - e.clientY;
+                    vm.position.pos3 = e.clientX;
+                    vm.position.pos4 = e.clientY;
+
+                    vm.styles.top =
+                      Number(vm.styles.top.replace("px", "")) -
+                      vm.position.pos2 +
+                      "px";
+                    vm.styles.left =
+                      Number(vm.styles.left.replace("px", "")) -
+                      vm.position.pos1 +
+                      "px";
+                  };
+                },
+              },
+            }),
+          })
+        ),
+      }
+
+      class Desktop {
+        #header
+        #window
+        #windows
+        constructor() {
+          this.#header = ViewModel.get({
+            properties: {
+              innerHTML: 'header',
+            },
+          })
+          this.#window = ViewModel.get({
+            properties: {
+              innerHTML: 'hi',
+            },
+            styles: {
+              flex: "1",
+              background: "green",
+            },
+            template: icons
+          })
+        }
+        setWindow(n, _ = type(n, 'number')) {
+          const window = this.#windows[n];
+          this.#window.name = window.name;
+        }
+
+        get header() {
+          return this.#header;
+        }
+
+        get window() {
+          return this.#window;
+        }
+      }
+
+      const desktop = new Desktop()
+
+      const viewmodel = ViewModel.get({
+        header: desktop.header,
+        window: ViewModel.get({
+          properties: {
+            innerHTML: 'hi',
+          },
+          styles: {
+            flex: "1",
+            background: "green",
+          },
+          template: icons
+        }),
+      });
+
+      binder.watch(viewmodel);
+      test = 'hello'
+    </script>
+  </body>
+</html>

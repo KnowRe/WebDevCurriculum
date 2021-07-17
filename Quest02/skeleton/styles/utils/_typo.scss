@@ -1,0 +1,16 @@
+@import "../abstracts/variable";
+@import "./mixins";
+
+@include generate(text, font-size);
+
+.text {
+  &-black {
+    color: black;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-bold {
+    font-weight: 800;
+  }
+}

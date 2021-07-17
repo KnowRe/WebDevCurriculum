@@ -1,0 +1,36 @@
+.btn {
+  border: none;
+  background-color: #F4F6FB;
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 0.5rem;
+  outline: none;
+
+  &-active {
+    background-color: #7C95C8;
+    color: #fff;
+  }
+
+  &-round {
+    @extend .btn;
+    font-size: 0.8rem;
+    background-color: #F4F6F8;
+    border-radius: 1rem;
+    border: 1px solid #DCDDDF;
+    padding: 0.6rem;
+    &-grey {
+      @extend .btn-round;
+      color: #525659;
+    }
+  }
+
+  &-outline {
+    border: 1px solid #000;
+    &-blue {
+      @extend .btn-outline;
+      color: #2C8BD5;
+      border-color: #2C8BD5;
+    }
+  }
+
+}

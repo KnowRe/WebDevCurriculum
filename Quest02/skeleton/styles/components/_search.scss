@@ -1,0 +1,14 @@
+@import "../abstracts/color";
+
+.search {
+  width: 100%;
+  border: 1px solid $primary;
+  border-radius: 3px;
+  padding: 16px;
+  background-color: #FFF;
+  box-sizing: border-box;
+  &-input {
+    flex: 1 0;
+    border: 0;
+  }
+}

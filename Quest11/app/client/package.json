@@ -1,0 +1,37 @@
+{
+  "name": "notepad",
+  "version": "0.0.1",
+  "description": "notepad",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "install": "npm run start",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juicyjusung/WebDevCurriculum.git"
+  },
+  "keywords": [
+    "webdev"
+  ],
+  "author": "juicyjusung <juicyjusung@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juicyjusung/WebDevCurriculum/issues"
+  },
+  "homepage": "https://github.com/juicyjusung/WebDevCurriculum#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2"
+  },
+  "dependencies": {
+    "fastify": "^3.19.1",
+    "fastify-static": "^4.2.2"
+  }
+}

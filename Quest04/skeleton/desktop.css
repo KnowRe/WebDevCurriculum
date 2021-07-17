@@ -1,1 +1,101 @@
-/* TODO: 자유롭게 바탕화면 시스템의 CSS를 만들어 보세요! */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
+.desktop {
+  width: 100%;
+  height: 100vh;
+  background: red;
+  display: flex;
+  flex-direction: column;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.header {
+  flex: 0 0 60px;
+  background: #f1e9e7;
+  display: flex;
+  align-items: center;
+}
+
+.window {
+  flex: 1;
+  background: #ffffff;
+  position: relative;
+}
+
+.tab {
+  list-style: none;
+}
+
+.icon-wrapper {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  /*background: #888B94;*/
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-image {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.icon-name {
+  text-align: center;
+}
+
+.modal-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
+}
+
+.modal-header {
+  display: flex;
+  flex: 0 0 50px;
+  justify-content: space-between;
+  align-items: center;
+  background: #382f31;
+}
+
+.modal-title {
+  margin-left: 1rem;
+  color: #F2F5F7;
+}
+
+.modal-btn {
+  font-size: 2rem;
+}
+
+.modal-content {
+  flex: 1;
+  background: #f2f5f7;
+}
+
+button {
+  margin: 0.25rem;
+  text-align: center;
+  width: auto;
+  background-color: #00BCF2;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn {
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background-color: transparent;
+  transition: box-shadow 0.2s, color 0.2s, background-color 0.2s;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}

@@ -1,0 +1,12 @@
+@import "../abstracts/color";
+
+.list {
+  padding: 0;
+  margin: 0.25rem 0;
+  & > :nth-child(n + 2) {
+    border-left: 1px solid $secondary;
+  }
+  &-item {
+
+  }
+}

@@ -35,12 +35,16 @@
 		<script>
 			let row1Squares = document.querySelectorAll('.row1 .square');
 			for(let node of row1Squares) {
-				/* TODO: node 변수를 어떻게 조작해야 할까요? */
+				node.addEventListener('click', () => {
+					node.style.backgroundColor = node.style.backgroundColor ? null : 'yellow';
+				})
 			}
 
 			let row2Squares = document.querySelectorAll('.row2 .square');
 			for(let node of row2Squares) {
-				/* TODO: node 변수를 어떻게 조작해야 할까요? */
+				node.addEventListener('click', () => {
+					node.classList.toggle('enabled');
+				})
 			}
 		</script>
 	</body>

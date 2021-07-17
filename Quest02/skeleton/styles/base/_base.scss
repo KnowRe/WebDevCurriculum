@@ -1,0 +1,32 @@
+@import "../abstracts/color";
+
+
+body {
+  background: $background
+}
+
+ol, ul, a{
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.main {
+  padding: 32px 0;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}

@@ -1,0 +1,11 @@
+.pan {
+  cursor: pointer;
+  background-color: #F5F7F9;
+  &-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem;
+    padding: 0;
+  }
+}

@@ -1,4 +1,4 @@
-class EsmUtilClass {
+export class EsmUtilClass {
     constructor(foo) {
         this.foo = foo;
     }
@@ -8,7 +8,7 @@ class EsmUtilClass {
     }
 }
 
-const esmUtilFunction = str => {
+export const esmUtilFunction = str => {
     return str.toUpperCase();
 };
 

@@ -1,0 +1,19 @@
+@import "../abstracts/color";
+
+.covid {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  cursor: pointer;
+  padding-left: 1rem;
+  align-items: end;
+  justify-content: center;
+
+
+  &-container {
+    display: flex;
+    & > :nth-child(n + 2) {
+      border-left: 1px solid $secondary;
+    }
+  }
+}

@@ -1,20 +1,187 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 	<head>
 		<meta charset="UTF-8">
-		<!-- TODO: 또 무엇이 필요할까요? -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta name="description" content="네이버 모바일 메인">
+		<meta property="og:title" content="네이버 모바일 메인">
+		<meta property="og:url" content="http://m.naver.com">
+		<meta property="og:image" content="AAA.png">
+		<meta property="og:description" content="네이버 모바일 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요">
+		<title>NAVER</title>
 	</head>
 	<body>
 		<header>
-			<!-- TODO: 어디까지를 header로 보는 것이 좋을까요? -->
+			<button>hamburger</button>
+			<div>
+				<button>QR체크인</button>
+				<button>NPay</button>
+				<button>Mailbox</button>
+			</div>
 		</header>
-
 		<section class="main">
-			<!-- TODO: main은 어떤 식으로 나눌 수 있을까요? -->
+
+			<section>
+				<a href="/">
+					<img src="" alt="NAVER로고"/>
+				</a>
+				<div>
+					<input type="text" placeholder="검색어를 입력해주세요."/>
+					<button>mic</button>
+					<button>camera</button>
+					<button>location</button>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="#">뉴스판</a></li>
+						<li><a href="#">경제지표판</a></li>
+						<li><a href="#">연예판</a></li>
+						<li><a href="#">트랜트판</a></li>
+						<li><a href="#">메일</a></li>
+						<li><a href="#">카페</a></li>
+						<li><a href="#">블로그</a></li>
+						<li><a href="#">...</a></li>
+					</ul>
+				</nav>
+			</section>
+
+			<section>
+				<div>
+					<div>
+						<img alt="달이미지"/>
+						<div>
+							<div>
+								<span>10°</span>
+								<span>맑음</span>
+							</div>
+							<span>어제보다 2° 높아요</span>
+						</div>
+					</div>
+					<div>
+						NOW~ 지금 방송중~
+					</div>
+				</div>
+
+				<article>
+					<div>
+						<h2>날씨</h2>
+						<span>서울시 잠실동</span>
+						<button>^</button>
+					</div>
+					<ul>
+						<li><button>시간대별 날씨</button></li>
+						<li><button>시간대별 미세먼지</button></li>
+						<li><button>주간 날씨</button></li>
+						<li><button>주간 미세먼지</button></li>
+					</ul>
+					<div>
+						<div>
+							<span>19°</span>
+							<span>8°</span>
+							<img alt="날시아이콘" src="#"/>
+							<span>어제</span>
+						</div>
+						<div>
+							<span>12°</span>
+							<span>7°</span>
+							<img alt="날시아이콘" src="#"/>
+							<span>오늘</span>
+						</div>
+					</div>
+				</article>
+
+				<div>
+					<a href="#">
+						<div>
+							<div>
+								<img alt="icon" src="#"/>
+								<h3>코로나 19</h3>
+							</div>
+							<span>국내외 확진 현황</span>
+						</div>
+					</a>
+					<a href="#">
+						<div>
+							<div>
+								<img alt="icon" src="#"/>
+								<h3>코로나19 팩트체크</h3>
+							</div>
+							<span>백신 정보 팩트는?</span>
+						</div>
+					</a>
+				</div>
+
+				<div>
+					<img alt="로고" src="#"/>
+					<span>제102주년 <strong>대한민국 임시정부 수립일</strong></span>
+				</div>
+
+				<div>
+					<img alt="로고" src="#"/>
+					<span>앱으로 <strong>새로운 네이버</strong>를 더 쾌적하게 사용해 보세요.</span>
+					<button>앱 사용하기</button>
+				</div>
+
+				<div>
+					<h2>웹툰</h2>
+					<button>화살표</button>
+				</div>
+
+				<!-- 판 -->
+				<div>
+					<div>
+						<h2>인기 주제 판을 확인해 보세요!</h2>
+						<a href="#">판관리</a>
+					</div>
+					<div>
+						<ul>
+							<li>
+								<a href="#">
+									<img alt="아이콘" src="#"/>
+									<span>영화판</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img alt="아이콘" src="#"/>
+									<span>뿜판</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img alt="아이콘" src="#"/>
+									<span>웹툰판</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img alt="아이콘" src="#"/>
+									<span>자동차판</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div>
+					<button>알립니다</button>
+					<h4>네이버앱 업데이트 사전 안내</h4>
+				</div>
+			</section>
 		</section>
 
 		<footer>
-			<!-- TODO: 하단의 여러 가지 링크들은 어떻게 처리하면 좋을까요? -->
+			<ul>
+				<li><a href="#">로그인</a></li>
+				<li><a href="#">전체서비스</a></li>
+				<li><a href="#">PC버전</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보처리방침</a></li>
+				<li><a href="#">고객센터</a></li>
+			</ul>
+			<a href="#">NAVER 로고</a>
 		</footer>
 	</body>
 </html>

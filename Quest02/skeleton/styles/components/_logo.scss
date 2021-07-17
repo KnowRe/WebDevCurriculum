@@ -1,0 +1,10 @@
+@import "../abstracts/color";
+
+.logo {
+  &-main {
+    font-size: 4rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: $primary;
+  }
+}

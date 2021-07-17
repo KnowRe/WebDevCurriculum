@@ -1,0 +1,19 @@
+@mixin generate($prefix, $property) {
+  @for $i from 1 through length($sizes) {
+    $size: nth($sizes, $i);
+    .#{$prefix}-#{$i - 1} {
+      #{$property}: $spacing * $size;
+    }
+  }
+}
+
+@mixin generate_xy($prefix, $property, $property2) {
+  @for $i from 1 through length($sizes) {
+    $size: nth($sizes, $i);
+    .#{$prefix}-#{$i - 1} {
+      #{$property}: $spacing * $size;
+      #{$property2}: $spacing * $size;
+
+    }
+  }
+}

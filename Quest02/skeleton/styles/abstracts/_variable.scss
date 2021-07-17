@@ -1,0 +1,27 @@
+$content-width: 600px;
+
+// spacing
+$spacing: 1rem;
+$sizes: [0, .25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.75, 4];
+$rules: [
+  [ma, margin],
+  [ml, margin-left],
+  [mt, margin-top],
+  [mb, margin-bottom],
+  [mr, margin-right],
+  [pa, padding],
+  [pl, padding-left],
+  [pt, padding-top],
+  [pb, padding-bottom],
+  [pr, padding-right],
+];
+$rules-xy: [
+  [mx, margin-left, margin-right],
+  [my, margin-top, margin-bottom],
+  [px, padding-left, padding-right],
+  [py, padding-top, padding-bottom],
+];
+
+//typo
+$fontsize: 1rem;
+

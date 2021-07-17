@@ -1,3 +1,4 @@
 {
-    "name": "esm-my-project"
+    "name": "esm-my-project",
+    "type": "module"
 }

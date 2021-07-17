@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+* {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.actions {
+    flex: 0 0 2rem;
+    padding: 0 1rem;
+    background: #888B94;
+    display: flex;
+    align-items: center;
+}
+.btn {
+    margin: 0 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    background-color: #2C8BD5;
+    transition: box-shadow 0.2s, color 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.tabs {
+    flex: 0 0 2rem;
+    display: flex;
+    align-items: center;
+    background: #252526;
+}
+
+.tab {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1rem;
+    cursor: pointer;
+    background: #2D2D2D;
+    color: rgba(255, 255, 255, 0.5);
+    height: 2rem;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.tab--selected {
+    background: #1E1E1E;
+    color: #cccccc;
+}
+
+.tab-name {
+    white-space: pre;
+}
+
+.tab-status {
+    margin: 1rem;
+}
+
+.tab-status-saved {
+    visibility: hidden;
+}
+
+.tab .close-btn {
+    cursor: pointer;
+}
+.tab .close-btn:hover {
+    color: #FFFFFF;
+}
+.editor {
+    flex: 1%;
+    background: #1E1E1E;
+}
+.editor-input {
+    width: 100%;
+    padding: 1rem;
+    line-height: 2rem;
+    background: #1E1E1E;
+    color: #D4D4D4;
+    height: calc(100vh - 8rem);
+}
